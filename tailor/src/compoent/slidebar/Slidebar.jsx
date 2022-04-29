@@ -16,6 +16,7 @@ function Slidebar() {
             <div className="sidebarmenu"> 
                     <ul className="sidebarlist">
                         <Option text={"Dashboard"} Icon={HomeIcon} />  
+                         
                         <Option text={"Add Order"} Icon={ShoppingCartIcon} /> 
                         <Option text={"View/Edit Order"} Icon={ShoppingCartIcon} /> 
                         <Option text={"Add Customer"} Icon={PersonRoundedIcon} /> 
