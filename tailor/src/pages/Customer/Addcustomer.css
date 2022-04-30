@@ -1,3 +1,68 @@
 .Addcustomer{
-    flex:4;
+    flex:4; 
+    padding: 10px; 
+}
+.customertitlecontainer{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+}
+.customerbodycontainer{
+    display: flex;
+    margin-top: 20px;
+}
+.create{
+
+    width: 50px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    font-size: 16px;
+    
+    padding: 10px; 
+   
+ }
+.Edit
+{  
+    flex: 1;
+    padding: 20px;
+    
+    box-shadow: 9px 8px 51px 0px rgba(0,0,0,0.31);
+    -webkit-box-shadow: 9px 8px 51px 0px rgba(0,0,0,0.31);
+    -moz-box-shadow: 9px 8px 51px 0px rgba(0,0,0,0.31);
+     border-radius: 10px;
+     padding: 20px; 
+}    
+.updatecustomer
+{
+   flex:2;
+   padding: 20px;
+   box-shadow: 9px 8px 51px 0px rgba(0,0,0,0.31);
+   -webkit-box-shadow: 9px 8px 51px 0px rgba(0,0,0,0.31);
+   -moz-box-shadow: 9px 8px 51px 0px rgba(0,0,0,0.31);
+   border-radius: 10px;
+   padding: 20px; 
+   margin-left: 10px;
+}
+.topview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Edit1{
+    align-items: center;
+    justify-content: center;
+}
+
+.updateProfilephoto{
+     padding: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 70px; 
+    object-fit: cover;
 }

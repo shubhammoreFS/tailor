@@ -29,6 +29,23 @@ export default function App() {
       <Route path="/Addcustomer" element={<Addcustomer/>} /> 
       
       <Route path="/Viewcustomer" element={<Vieweditcustomer/>} /> 
+      
+      
+      <Route path="/AddOrder" element={<Vieweditcustomer/>} /> 
+      
+      
+      <Route path="/ViewEditOrder" element={<Vieweditcustomer/>} /> 
+      
+      
+      <Route path="/SentMessage" element={<Vieweditcustomer/>} /> 
+      
+      
+      <Route path="/SentEmail" element={<Vieweditcustomer/>} /> 
+      
+      
+      <Route path="/Staff" element={<Vieweditcustomer/>} /> 
+      
+      <Route path="/Settings" element={<Vieweditcustomer/>} /> 
 
       
     </Routes>

@@ -2,8 +2,19 @@ import * as React from 'react';
 import './vieweditcustomer.css';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import {
+  BrowserRouter,
+  Routes,
+  Route,Link,
+} from "react-router-dom";
+import {UserRows} from './dummydata.js'
+import  {useState} from 'react';
 
+ 
+ 
 
+export default function vieweditcustomer() {  
+  
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'Name', headerName: 'Name', width: 130 },
@@ -20,7 +31,8 @@ const columns: GridColDef[] = [
        renderCell :(params)=>{
            return(
                <> 
-               <button className='Editcustomer'>Edit</button>
+               <Link to={"/ViewCustomer/"+params.row.id}> 
+               <button className='Editcustomer'>Edit</button></Link>
                <DeleteIcon className='deleteItem'/>
                </>
            )
@@ -30,31 +42,12 @@ const columns: GridColDef[] = [
    },
 ];
 
-const rows = [
-  { id: 1, Name: 'Snow', Address: 'Jon', phonenumber: 3424534554},
-  { id: 2, Name: 'Lannister', Address: 'Cersei', phonenumber: 3424534554},
-  { id: 3, Name: 'Lannister', Address: 'Jaime', phonenumber: 3424534554},
-  { id: 4, Name: 'Stark', Address: 'Arya', phonenumber: 3424534554},
-  { id: 5, Name: 'Targaryen', Address: 'Daenerys', phonenumber:3424534554},
-  { id: 1, Name: 'Snow', Address: 'Jon', phonenumber: 3424534554},
-  { id: 2, Name: 'Lannister', Address: 'Cersei', phonenumber: 3424534554},
-  { id: 3, Name: 'Lannister', Address: 'Jaime', phonenumber: 3424534554},
-  { id: 4, Name: 'Stark', Address: 'Arya', phonenumber: 3424534554},
-  { id: 5, Name: 'Targaryen', Address: 'Daenerys', phonenumber:3424534554},
-  { id: 1, Name: 'Snow', Address: 'Jon', phonenumber: 3424534554},
-  { id: 2, Name: 'Lannister', Address: 'Cersei', phonenumber: 3424534554},
-  { id: 3, Name: 'Lannister', Address: 'Jaime', phonenumber: 3424534554},
-  { id: 4, Name: 'Stark', Address: 'Arya', phonenumber: 3424534554},
-  { id: 5, Name: 'Targaryen', Address: 'Daenerys', phonenumber:3424534554}
-];
-
-export default function vieweditcustomer() {
   return (
     <div className='view_customer'><br></br><br></br>
     <div style={{ height: 500, width: '90%' }}>
       <DataGrid 
       disableSelectionOnClick
-        rows={rows}
+        rows={UserRows}
         columns={columns}
         pageSize={7}
         rowsPerPageOptions={[5]}
